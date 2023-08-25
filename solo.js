@@ -124,25 +124,25 @@ console.log(average())
 
 
 function fibonacciSequence(numTerms) {
-  //if numTerms is <= 0 then a empty array is returned 
+  //If numTerms is <= 0 then a empty array is returned 
   if (numTerms <= 0) {
     return [];
   } else if (numTerms === 1) {
-    //if numTerms is equal to 1 then it returns an array with 1 element 
+    //If numTerms is equal to 1 then it returns an array with 1 element 
     return [0];
   } else if (numTerms === 2) {
-  // and so on 
+  // And so on 
     return [0, 1]
   }
 
   const sequence = [0, 1];
-// the for loop is to end the fibSequence when i is less the numTerms
+// The for loop is to end the fibSequence when i is less the numTerms
   for (let i = 2; i < numTerms; i++) {
-    //this line is what creates the Sequence (take the term before and add the term behind it then push it to the next term)
+    //This line is what creates the Sequence (take the term before and add the term behind it then push it to the next term)
     const nextTerm = sequence[i - 1] + sequence[i - 2];
     sequence.push(nextTerm)
   }
-//then return sequence to the fibonacci function 
+//Then return sequence to the fibonacci function 
   return sequence
 }
 
